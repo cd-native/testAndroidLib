@@ -42,3 +42,25 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+
+apply plugin: 'com.novoda.bintray-release'
+
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.1'
+    }
+}
+
+publish {
+    userOrg = 'yangchongduo'
+    groupId = 'com.zhiqian.robot.testlib'
+    artifactId = 'TestLib'
+    publishVersion = '1.0.0'
+    desc = '测试 .'
+    website = 'https://github.com/cd-native/testAndroidLib'
+}
